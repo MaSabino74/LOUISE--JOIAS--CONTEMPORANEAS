@@ -1,0 +1,53 @@
+/* =============================
+   RESPONSIVIDADE - responsive.css
+============================= */
+
+/* Tablets (até 1024px) */
+@media (max-width: 1024px) {
+  .produtos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Celulares (até 768px) */
+@media (max-width: 768px) {
+  .produtos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .produto-card img {
+    height: 200px; /* reduz a altura para telas pequenas */
+  }
+
+  .produto-card h1 {
+    font-size: 1rem;
+  }
+
+  .produto-card p {
+    font-size: 0.9rem;
+  }
+
+  .preco {
+    font-size: 1rem;
+  }
+
+  .whatsapp-button {
+    width: 100%; /* botão ocupa toda a largura no mobile */
+    padding: 12px;
+  }
+}
+
+/* Celulares pequenos (até 480px) */
+@media (max-width: 480px) {
+  .produto-card img {
+    height: 180px;
+  }
+
+  .produto-card h1 {
+    font-size: 0.95rem;
+  }
+
+  .produto-card p {
+    font-size: 0.85rem;
+  }
+}

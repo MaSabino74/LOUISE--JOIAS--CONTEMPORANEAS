@@ -65,8 +65,9 @@ nav {
 
 
 .hero {
- background-image: url('sua-imagem-de-fundo.jpg'); /* Substitua pelo caminho da sua imagem */
+ background-image: url('../img/hero_luoise.jpg'); /* Substitua pelo caminho da sua imagem */
  background-size: cover;
+ background-repeat: no-repeat;
  background-position: center;
  color: #fff;
  text-align: center;
@@ -127,8 +128,8 @@ nav {
 
 .produtos-grid {
  display: grid;
- grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
- gap: 30px;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 20px;
  padding: 20px;
 }
 
@@ -139,8 +140,9 @@ nav {
  overflow: hidden;
  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
  transition: transform 0.3s ease-in-out;
+ max-width: 300px; /* limitar largura do card */
+ margin: 0 auto; /* centralizar dentro da coluna */
 }
-
 
 .produto-card:hover {
  transform: translateY(-5px);
@@ -148,9 +150,10 @@ nav {
 
 
 .produto-card img {
- width: 100%;
- display: block;
- height: auto;
+width: 100%;
+  height: 200px;       /* altura fixa para todas as imagens */
+  object-fit: cover;   /* corta e ajusta proporcionalmente */
+  display: block;
 }
 
 
@@ -257,74 +260,3 @@ footer {
  margin-top: 20px;
 }
 
-@media screen and (max-width: 768px) {
-    /* Header e Navegação */
-    nav {
-        flex-direction: column;
-        text-align: center;
-        gap: 1.5rem;
-    }
-
-    .menu {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-
-    .menu li {
-        margin: 10px 0;
-    }
-
-    /* Hero Section */
-    .hero {
-        padding: 60px 20px;
-    }
-
-    .hero h1 {
-        font-size: 1.8rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-    /* Sobre Nós */
-    .sobre-nos {
-        padding: 40px 15px;
-    }
-
-    .sobre-nos h2 {
-        font-size: 1.5rem;
-    }
-
-    /* Seção de Produtos */
-    .produtos h2 {
-        font-size: 1.5rem;
-    }
-
-    .produtos-grid {
-        grid-template-columns: 1fr; /* Muda para uma única coluna */
-        gap: 20px;
-    }
-
-    .produto-card {
-        max-width: 90%;
-        margin: 0 auto;
-    }
-
-    /* Rodapé */
-    .footer-content {
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-    }
-
-    .social-links {
-        display: flex;
-        justify-content: center;
-    }
-
-    .whatsapp-contact {
-        width: 80%;
-    }
-}
